@@ -7,7 +7,7 @@ import scipy.optimize as opt
 import random                   
 
 #-------------------------------------------------
-def constant_field (N_ex, time_steps, step, t, B, x, y, save, repicable_exp, starting_mode):
+def constant_field (N_ex, time_steps, step, t, B, x, y, save, replicable_exp, starting_mode):
 	
     #-------------------------------------------------
 	#   Defining the parameters:
@@ -41,7 +41,7 @@ def constant_field (N_ex, time_steps, step, t, B, x, y, save, repicable_exp, sta
        
     for i in range(0,N_ex):
         
-        if repicable_exp == 1:
+        if replicable_exp == 1:
             np.random.seed(seeds[i])        #Takes the seed
 
         random_n = [np.random.uniform(0, 1) for i in range(time_steps)]

@@ -29,7 +29,7 @@ B_pbit2 = 0.2                                   # Applied magnetic field, Tesla.
 save =1                                         # 1: for saving results; 0: for not saving results
 cycles = 4                                      # Changeable field applied. If only option = 1 
 starting_mode = 1-0.55                          # Starting mode for all the spins (0.5 = 50% spins in the lower state of energy) 
-repicable_exp = 1                               # 1: to plant a seed; 0: for random results
+replicable_exp = 1                               # 1: to plant a seed; 0: for random results
 tau_exp = 5000                                  # Tau value of the exponential curve
 total_time = 5*10E4                             # Total Time of the experiment
 probability = 0.019998                          # Probability of state changing (each time step), % 
@@ -70,10 +70,10 @@ t, B, P_ij, P_i, x, y, E = Bolztman_distribution (B_max, [], g_Dy, T, time_steps
 #   To changeable or constant field, we have:
 #--------------------------------------------------------------------
 if option == 1:
-    Rt, Rt_1, Rt_0, cambios, N_zeros_percent, y_relaxation,  Matrix  = changeable_field (N_ex, time_steps, step,  t, B, x, y, save, repicable_exp, starting_mode, option)
+    Rt, Rt_1, Rt_0, cambios, N_zeros_percent, y_relaxation,  Matrix  = changeable_field (N_ex, time_steps, step,  t, B, x, y, save, replicable_exp, starting_mode, option)
 
 else:
-    Rt, Rt_1, Rt_0, cambios, N_zeros_percent, y_relaxation, Matrix = constant_field (N_ex, time_steps, step, t, B, x, y, save, repicable_exp, starting_mode)
+    Rt, Rt_1, Rt_0, cambios, N_zeros_percent, y_relaxation, Matrix = constant_field (N_ex, time_steps, step, t, B, x, y, save, replicable_exp, starting_mode)
 
 #--------------------------------------------------------------------
 #   Graphics:
