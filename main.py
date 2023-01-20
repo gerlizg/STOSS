@@ -7,11 +7,8 @@
 from read_data import *
 from mag_relaxation import *
 from Bolztman_distribution import *
-from Bolztman_distribution_bit2 import *
 from changeable_field import *
-from changeable_field_bit2 import *
 from constant_field import *
-from frequency import *
 from curve_fitting import *
 from td import *
 import time
@@ -21,21 +18,21 @@ import time
 #                   CONFIGURATIONS
 #--------------------------------------------------------------------
 
-option = 0                                  # 1: changeable field; 0: constant field 
-option_2spin = 1                            # 1: yes; 0: no
-N_ex = 1000                                 # Number of Spins
-flag = 23                                   # System index in the data set
-T = 20                                      # Temperature, Kelvin
-B = 0.01                                    # Applied magnetic field, Tesla. If only option = 0
-B_max = 0.00025	                            # Maximum applied magnetic field, Tesla. If only option = 1
-B_pbit2 = 0.2                               # Applied magnetic field, Tesla. If only option = 2
-save =1                                     # 1: for saving results; 0: for not saving results
-cycles = 4                                  # Changeable field applied. If only option = 1 
-starting_mode = 0                           # Starting mode for all the spins (0.5 = 50% spins in the lower state of energy) 
-repicable_exp = 0                           # 1: to plant a seed; 0: for random results
-tau_exp = 50                                # Tau value of the exponential curve
-total_time = 3 * 1000                       # Total Time of the experiment
-probability = 1.9998                        # Probability of state changing (each time step), % 
+option = 1                                      # 1: changeable field; 0: constant field 
+option_2spin = 0                                # 1: yes; 0: no
+N_ex = 1000                                     # Number of Spins
+flag = 23                                       # System index in the data set
+T = 20/1000                                     # Temperature, Kelvin
+B = 0                                           # Applied magnetic field, Tesla. If only option = 0
+B_max = 0.00025	                                # Maximum applied magnetic field, Tesla. If only option = 1
+B_pbit2 = 0.2                                   # Applied magnetic field, Tesla. If only option = 2
+save =1                                         # 1: for saving results; 0: for not saving results
+cycles = 4                                      # Changeable field applied. If only option = 1 
+starting_mode = 1-0.55                          # Starting mode for all the spins (0.5 = 50% spins in the lower state of energy) 
+repicable_exp = 1                               # 1: to plant a seed; 0: for random results
+tau_exp = 5000                                  # Tau value of the exponential curve
+total_time = 5*10E4                             # Total Time of the experiment
+probability = 0.019998                          # Probability of state changing (each time step), % 
 
  
 '''
